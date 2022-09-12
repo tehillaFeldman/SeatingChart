@@ -1,7 +1,5 @@
-
 class SeatingChart
 {
-
   Student[][] seats = new Student[5][4];
   int row, column;
   
@@ -9,7 +7,6 @@ class SeatingChart
   {
     Student newStudent = new Student(firstName, lastName);
     seats[row][column] = newStudent;
-    
   }
 
   public void printChart()
@@ -24,9 +21,7 @@ class SeatingChart
           System.out.print("*");
         }else{
           System.out.print(seats[row][column].getFirstName());
-        
         }
-      
       }
        System.out.println();
     }
@@ -38,7 +33,6 @@ class SeatingChart
     int ogStudentRow=0;
     int ogStudentColumn=0;
     boolean studentExists=false;
-    
       for (int row = 0; row < seats.length; row++)
       {
         for(int column = 0; column < seats[row].length; column++)
@@ -50,12 +44,10 @@ class SeatingChart
            studentExists=true;
            ogStudentRow = row;
            ogStudentColumn = column;
-           
          }
         }
       }
        
-
       if( studentExists==true)
       {
         Student switchStudent = new Student(firstName, lastName);
@@ -69,5 +61,4 @@ class SeatingChart
           System.out.println("student does not exist");
       }
   }
-  
 }
